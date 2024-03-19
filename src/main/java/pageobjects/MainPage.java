@@ -26,11 +26,19 @@ public class MainPage extends PageObject{
 	
 	@FindBy(css ="div.tm-marketplace-search-card__wrapper a div.tm-marketplace-search-card__title") 
 	public WebElementFacade getSearchResultByTitle;
+	
+	@FindBy(css ="h1.tm-marketplace-buyer-options__listing_title") 
+	public WebElementFacade productTitle;
+	
+	@FindBy(css ="div.tm-marketplace-listing-body__item div.o-rack-item__primary-body") 
+	public List<WebElementFacade> productDetails;
 	 
-	//div.ng-star-inserted h1
+	//h1.tm-marketplace-buyer-options__listing_title
 	
 	public String getUrl() {
 		return getDriver().getCurrentUrl();
 	}
+	
+	
 	
 }
